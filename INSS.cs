@@ -30,12 +30,12 @@ public class INSS
         if (salario > limites[limites.Length - 1])
         {
             inss = 0;
-            double[] teto = { 1412.00, 1254.68, 1333.35, 3786.00 }; // valores aproximados por faixa
+            double[] teto = { 1412.00, 1254.68, 1333.35, 3786.00 }; 
             double[] aliquotasTeto = { 0.075, 0.09, 0.12, 0.14 };
             for (int i = 0; i < teto.Length; i++)
                 inss += teto[i] * aliquotasTeto[i];
         }
 
-        return Math.Round(inss, 2); // arredonda para 2 casas decimais
+        return Math.Round(inss, 2); 
     }
 }
