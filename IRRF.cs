@@ -24,10 +24,12 @@ public class IRRF
             aliquota = 0.225;
             deducao = 662.77;
         }
-        else:
+        else
+        {
             aliquota = 0.275;
             deducao = 896.00;
+        }
 
-        return salarioBase * aliquota - deducao;
+        return Math.Round(salarioBase * aliquota - deducao, 2);
     }
 }
